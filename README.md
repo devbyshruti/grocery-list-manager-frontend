@@ -12,9 +12,8 @@ This is the frontend of a full-stack application designed to help users manage t
 ## ✨ Features
 * **User Authentication:** Secure Signup and Login using JWT (JSON Web Tokens).
 * **Real-time Grocery Management:** Add, update, and delete items from your shopping list with instant UI updates.
-* **Live Budget Tracking:** Automatically calculates the total cost of all items (Price × Quantity) in the grocery list.
 * **Pantry Inventory:** View available ingredients and track expiry dates.
-* **Recipe Suggestions:** Intelligent logic that suggests recipes based on ingredients currently available in your pantry.
+* **Recipe Suggestions:** Custom matching algorithm compares pantry ingredients against stored recipes and highlights missing items.
 * **Protected Routes:** React Context API ensures only logged-in users can access the dashboard.
 * **Responsive UI:** Fully optimized for mobile and desktop using **Tailwind CSS** and **ShadCN UI**.
 
@@ -61,3 +60,12 @@ npm install
 Bash
 npm run dev
 ```
+
+## 🚀 Deployment
+* Frontend: Netlify
+* Backend: Render
+* Database: Supabase (PostgreSQL)
+
+## 🌍 Live Demo
+🔗 Frontend: https://luxury-gingersnap-2299d4.netlify.app/  
+🔗 Backend API: https://grocery-list-manager-backend.onrender.com/
