@@ -77,10 +77,13 @@ export const GroceryProvider = ({ children }) => {
     }
   };
 
-  useEffect(() => {
+useEffect(() => {
+  const token = localStorage.getItem("token");
+  if (token) {
     fetchGroceries();
     fetchPantry();
-  }, []);
+  }
+}, []);
 
   return (
     <GroceryContext.Provider

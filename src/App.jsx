@@ -17,35 +17,38 @@ import SuggestedRecipes from "./pages/SuggestedRecipes";
 
 function App() {
   return (
-    <AuthProvider>
-      <GroceryProvider>
-        <RecipeProvider>
-          <BrowserRouter>
-            <Routes>
-              
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
+   <AuthProvider>
+  <BrowserRouter>
+    <Routes>
 
-              
-              <Route element={<ProtectedRoute />}>
-                <Route element={<ProtectedLayout />}>
-                  <Route path="/" element={<Dashboard />} />
-                  <Route path="/grocery" element={<GroceryPage />} />
-                  <Route path="/pantry" element={<PantryPage />} />
-                  <Route path="/recipes" element={<AllRecipes />} />
-                  <Route path="/recipes/suggestions" element={<SuggestedRecipes />} />
-                </Route>
-              </Route>
+     
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
 
-            
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+      
+      <Route element={<ProtectedRoute />}>
+        <Route
+          element={
+            <GroceryProvider>
+              <RecipeProvider>
+                <ProtectedLayout />
+              </RecipeProvider>
+            </GroceryProvider>
+          }
+        >
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/grocery" element={<GroceryPage />} />
+          <Route path="/pantry" element={<PantryPage />} />
+          <Route path="/recipes" element={<AllRecipes />} />
+          <Route path="/recipes/suggestions" element={<SuggestedRecipes />} />
+        </Route>
+      </Route>
 
-            <Toaster />
-          </BrowserRouter>
-        </RecipeProvider>
-      </GroceryProvider>
-    </AuthProvider>
+      <Route path="*" element={<NotFound />} />
+
+    </Routes>
+  </BrowserRouter>
+</AuthProvider>
   );
 }
 
