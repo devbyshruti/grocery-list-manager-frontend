@@ -1,11 +1,15 @@
-# 🛒 Grocery List Manager - Frontend
+# 🛒FreshTrack – Smart Grocery & Pantry Manager
 
-### **Project Title:** Grocery List Manager 
+### **Project Title:** FreshTrack  
 
 ---
 
 ##  Project Description
-This is the frontend of a full-stack application designed to help users manage their household inventory. Users can track grocery needs, calculate budgets in real-time, and manage their pantry stock. The application is fully integrated with a Node.js/Express backend and a Supabase database to ensure data persistence and secure user authentication.
+FreshTrack is a full-stack web application that helps users manage their groceries, pantry inventory, and discover recipes based on available ingredients.
+
+Users can create grocery lists, track pantry items, monitor expiry dates, and get recipe suggestions using ingredients they already have. The application includes secure authentication and a responsive dashboard for easy household management.
+
+The frontend is built with React and communicates with a Node.js/Express backend connected to a Supabase PostgreSQL database.
 
 ---
 
@@ -15,6 +19,7 @@ This is the frontend of a full-stack application designed to help users manage t
 * **Pantry Inventory:** View available ingredients and track expiry dates.
 * **Recipe Suggestions:** Custom matching algorithm compares pantry ingredients against stored recipes and highlights missing items.
 * **Protected Routes:** React Context API ensures only logged-in users can access the dashboard.
+* **Smooth UI Animations:** Implemented using Framer Motion.
 * **Responsive UI:** Fully optimized for mobile and desktop using **Tailwind CSS** and **ShadCN UI**.
 
 ---
@@ -23,6 +28,7 @@ This is the frontend of a full-stack application designed to help users manage t
 * **Core:** React.js (Vite)
 * **Styling:** Tailwind CSS
 * **Components:** ShadCN UI & Lucide React (Icons)
+* **Animations:** Framer Motion
 * **State Management:** React Context API
 * **API Communication:** Axios (with Interceptors for JWT)
 * **Routing:** React Router DOM
